@@ -3,18 +3,18 @@ import csv
 import os
 
 print("RUNNING")
-user = 'root' # your username
-passwd = 'dBPJJWa4gkBjBQZn' # your password
-host = 'localhost' # your host or localhost if running locally
-db = 'chefables' # database where your table is stored
-dest_folder = 'C:\\Users\\jonju\\Desktop\\Chefables\\DB Tables\\' # destination folder for the files to be written
+user = '' # your username
+passwd = '' # your password
+host = '' # your host or localhost if running locally
+db = '' # database where your table is stored
+dest_folder = '' # destination folder for the files to be written
 try:
     con = MySQLdb.connect(user=user, passwd=passwd, host=host, db=db, autocommit=True)
     cursor = con.cursor()
 except:
     raise(ConnectionError)
 
-for fileName in os.listdir('C:\\Users\\jonju\\Desktop\\Chefables\\DB Tables\\Done'): #update this path
+for fileName in os.listdir(''): #update this path
     if('.py' not in fileName):
         name = os.path.splitext(fileName)
         tableName = name[0]
